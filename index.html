@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple E-Commerce</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Simple E-Commerce</h1>
+        <button id="cartButton" onclick="toggleCart()">Cart (0)</button>
+    </header>
+    <div class="container">
+        <div class="products" id="products">
+            <div id="loading">Loading...</div>
+            <div id="error" style="display: none; color: red;">Error fetching products. Please try again later.</div>
+        </div>
+        <div class="cart" id="cart">
+            <h2>Your Cart</h2>
+            <ul id="cartItems"></ul>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
